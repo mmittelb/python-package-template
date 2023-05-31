@@ -48,6 +48,7 @@ def print_futher_instuctions(project_name: str, github: str) -> None:
     1) Now you can start working on it:
 
         $ cd {project_name} && git init
+        $ pyenv local <environment>
 
     2) If you don't have Poetry installed run:
 
