@@ -5,7 +5,7 @@
 ## TL;DR
 
 ```bash
-cookiecutter gh:TezRomacH/python-package-template --checkout v1.1.1
+cookiecutter gh:mmittelb/python-package-template --checkout master
 ```
 
 > All you need is the latest version of cookiecutter 😉
