@@ -30,7 +30,6 @@ pre-commit-install:
 #* Formatters
 .PHONY: codestyle
 codestyle:
-	poetry run pyupgrade --exit-zero-even-if-changed --py{{ cookiecutter.minimal_python_version.replace('.', '') }}-plus **/*.py
 	poetry run isort --settings-path pyproject.toml ./
 	poetry run black --config pyproject.toml ./
 
@@ -64,7 +63,7 @@ lint: test check-codestyle mypy check-safety
 
 .PHONY: update-dev-deps
 update-dev-deps:
-	poetry add -D bandit@latest darglint@latest "isort[colors]@latest" mypy-extensions@latest mypy@latest pre-commit@latest pydocstyle@latest pylint@latest pytest@latest pyupgrade@latest safety@latest coverage@latest coverage-badge@latest pytest-html@latest pytest-cov@latest
+	poetry add -D bandit@latest darglint@latest "isort[colors]@latest" mypy-extensions@latest mypy@latest pre-commit@latest pydocstyle@latest pylint@latest pytest@latest safety@latest coverage@latest coverage-badge@latest pytest-html@latest pytest-cov@latest
 	poetry add -D --allow-prereleases black@latest
 
 #* Docker

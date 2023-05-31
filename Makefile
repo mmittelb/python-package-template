@@ -26,7 +26,7 @@ pre-commit-install:
 #* Formatters
 .PHONY: codestyle
 codestyle:
-	poetry run pyupgrade --exit-zero-even-if-changed --py37-plus **/*.py
+	poetry run pyupgrade --exit-zero-even-if-changed --py311-plus **/*.py
 	poetry run isort --settings-path pyproject.toml hooks tests
 	poetry run black --config pyproject.toml hooks tests
 
@@ -60,7 +60,7 @@ lint: test check-codestyle mypy check-safety
 
 .PHONY: update-dev-deps
 update-dev-deps:
-	poetry add -D bandit@latest darglint@latest "isort[colors]@latest" mypy@latest pre-commit@latest pydocstyle@latest pylint@latest pytest@latest pyupgrade@latest safety@latest coverage@latest coverage-badge@latest pytest-html@latest pytest-cov@latest
+	poetry add -D bandit@latest darglint@latest "isort[colors]@latest" mypy-extensions@latest mypy@latest pre-commit@latest pydocstyle@latest pylint@latest pytest@latest pyupgrade@latest safety@latest coverage@latest coverage-badge@latest pytest-html@latest pytest-cov@latest
 	poetry add -D --allow-prereleases black@latest
 
 #* Cleaning

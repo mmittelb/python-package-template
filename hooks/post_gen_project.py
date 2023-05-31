@@ -80,7 +80,10 @@ def enable_vscode_settings(directory):
     Args:
         directory: path to the project directory
     """
-    move(str(directory / ".vscode" / f"settings_orig.json"), str(directory / ".vscode" / f"settings.json"))
+    move(
+        str(directory / ".vscode" / f"settings_orig.json"),
+        str(directory / ".vscode" / f"settings.json"),
+    )
 
 
 def main() -> None:
