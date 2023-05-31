@@ -30,8 +30,7 @@ classifiers = [  #! Update me
   "Operating System :: OS Independent",
   "Topic :: Software Development :: Libraries :: Python Modules",
   "{{ license_classifiers[cookiecutter.license] }}",
-  "Programming Language :: Python :: 3",
-  "Programming Language :: Python :: 3.{{ minor_version }}",{% endfor %}
+  "Programming Language :: Python :: {{ cookiecutter.minimal_python_version }}",
 ]
 
 [tool.poetry.dependencies]
