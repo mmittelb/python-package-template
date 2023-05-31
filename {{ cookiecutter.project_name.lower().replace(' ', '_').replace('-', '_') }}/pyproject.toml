@@ -7,35 +7,35 @@
 {%- set python_version_splitted = cookiecutter.minimal_python_version.split('.') | map('int') | list -%}
 # Poetry pyproject.toml: https://python-poetry.org/docs/pyproject/
 [build-system]
-  requires = ["poetry_core>=1.0.0"]
-  build-backend = "poetry.core.masonry.api"
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
-  name = "{{ cookiecutter.project_name }}"
-  version = "{{ cookiecutter.version }}"
-  description = "{{ cookiecutter.project_description }}"
-  readme = "README.md"
-  authors = ["{{ cookiecutter.organization }} <{{ cookiecutter.email }}>"]
-  license = "{{ cookiecutter.license }}"
-  repository = "https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}"
-  homepage = "https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}"
+name = "{{ cookiecutter.project_name }}"
+version = "{{ cookiecutter.version }}"
+description = "{{ cookiecutter.project_description }}"
+readme = "README.md"
+authors = ["{{ cookiecutter.organization }} <{{ cookiecutter.email }}>"]
+license = "{{ cookiecutter.license }}"
+repository = "https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}"
+homepage = "https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}"
 
-  # Keywords description https://python-poetry.org/docs/pyproject/#keywords
-  keywords = []  #! Update me
+# Keywords description https://python-poetry.org/docs/pyproject/#keywords
+keywords = []  #! Update me
 
-  # Pypi classifiers: https://pypi.org/classifiers/
-  classifiers = [  #! Update me
-    "Development Status :: 3 - Alpha",
-    "Intended Audience :: Developers",
-    "Operating System :: OS Independent",
-    "Topic :: Software Development :: Libraries :: Python Modules",
-    "{{ license_classifiers[cookiecutter.license] }}",
-    "Programming Language :: Python :: {{ cookiecutter.minimal_python_version }}",
-  ]
+# Pypi classifiers: https://pypi.org/classifiers/
+classifiers = [  #! Update me
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "{{ license_classifiers[cookiecutter.license] }}",
+  "Programming Language :: Python :: {{ cookiecutter.minimal_python_version }}",
+]
 
 [tool.poetry.dependencies]
-  python = "^{{ cookiecutter.minimal_python_version }}"
-[tool.poetry.group.dev-dependencies]
+python = "^{{ cookiecutter.minimal_python_version }}"
+[tool.poetry.group.dev.dependencies]
   bandit = "^1.7.1"
   black = {version = "^21.10b0", allow-prereleases = true}
   darglint = "^1.8.1"
