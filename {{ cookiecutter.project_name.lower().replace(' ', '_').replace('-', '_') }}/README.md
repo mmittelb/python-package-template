@@ -25,6 +25,7 @@
 
 ```bash
 cd {{ cookiecutter.project_name }} && git init
+pyenv local <interpreterName>
 ```
 
 2. If you don't have `Poetry` installed run:
@@ -36,6 +37,7 @@ make poetry-download
 3. Initialize poetry and install `pre-commit` hooks:
 
 ```bash
+make update-dev-deps
 make install
 make pre-commit-install
 ```
@@ -55,6 +57,8 @@ git branch -M main
 git remote add origin https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}.git
 git push -u origin main
 ```
+
+6. Start VSCode and select interpreter.
 
 ### Set up bots
 

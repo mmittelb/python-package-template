@@ -5,6 +5,9 @@
 ## TL;DR
 
 ```bash
+pyenv virtualenv 3.11.3 <interpreterName>
+pyenv shell <interpreterName>
+pip install cookiecutter
 cookiecutter gh:mmittelb/python-package-template --checkout master
 ```
 

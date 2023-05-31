@@ -71,6 +71,8 @@ def print_futher_instuctions(project_name: str, github: str) -> None:
         $ git branch -M main
         $ git remote add origin https://github.com/{github}/{project_name}.git
         $ git push -u origin main
+
+    6) Start VSCode and  select interpreter.
     """
     print(textwrap.dedent(message))
 
