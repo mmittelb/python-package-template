@@ -55,6 +55,7 @@ def print_futher_instuctions(project_name: str, github: str) -> None:
 
     3) Initialize poetry and install pre-commit hooks:
 
+        $ make update-dev-deps
         $ make install
         $ make pre-commit-install
 
