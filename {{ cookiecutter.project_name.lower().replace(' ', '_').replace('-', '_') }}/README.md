@@ -150,18 +150,6 @@ or install with `Poetry`
 poetry add {{ cookiecutter.project_name }}
 ```
 
-{% if cookiecutter.create_example_template == 'cli' -%}Then you can run
-
-```bash
-{{ cookiecutter.project_name }} --help
-```
-
-or with `Poetry`:
-
-```bash
-poetry run {{ cookiecutter.project_name }} --help
-```{%- endif %}
-
 ### Makefile usage
 
 [`Makefile`](https://github.com/{{ cookiecutter.github_name }}/{{ cookiecutter.project_name }}/blob/master/Makefile) contains a lot of functions for faster development.

@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+      "njpwerner.autodocstring",
+      "editorconfig.editorconfig",
+      "marklarah.pre-commit-vscode",
+      "ms-python.vscode-pylance",
+      "ms-python.python",
+      
+    ]
+}
